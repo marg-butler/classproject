@@ -6,16 +6,19 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
 
 library(tidyverse)
 library(janitor)
 library(readr)
-
 ```
 
 ```{r}
-
-
-
+trains <- read_csv("train.csv", col_types = cols(
+  obs = col_double(),
+  citizen = col_logical(),
+  age = col_double(),
+  treatment = col_double(),
+  attitude = col_double()
+))
 ```
